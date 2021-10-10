@@ -31,3 +31,12 @@ tel.addEventListener('input', function() {
         tel_error.textContent = "";
     else tel_error.textContent = "Telephone is incorrect!"
 })
+
+const pwd = document.querySelector('#pwd');
+const pwd_error = document.querySelector('.pwd-error');
+pwd.addEventListener('input', function() {
+    let pwdRegex = RegExp('^.{8,}$');
+    if(pwdRegex.test(pwd.value))
+        pwd_error.textContent = "";
+    else pwd_error.textContent = "pwd is incorrect!"
+})
