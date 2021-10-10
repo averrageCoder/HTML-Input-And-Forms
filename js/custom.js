@@ -13,3 +13,12 @@ text.addEventListener('input', function() {
         text_error.textContent = "";
     else text_error.textContent = "Name is incorrect!"
 })
+
+const email = document.querySelector('#email');
+const email_error = document.querySelector('.email-error');
+email.addEventListener('input', function() {
+    let emailRegex = RegExp('^[a-z]+([\.\+\_\-][a-z]+)?@[a-z]+.[a-z]+(\.[a-z]{2})?$');
+    if(emailRegex.test(email.value))
+        email_error.textContent = "";
+    else email_error.textContent = "Email is incorrect!"
+})
